@@ -1,6 +1,6 @@
 # Kuroneko-AutoML 完整文档
 
-作者: Kuroneko
+作者:  Kuroneko
 
 ---
 

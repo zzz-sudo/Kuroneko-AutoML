@@ -1,0 +1,77 @@
+# Kuroneko-AutoML .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Models (大文件，不上传到 Git)
+models/*
+!models/.gitkeep
+
+# Data (数据集，不上传)
+data/*
+!data/.gitkeep
+
+# Logs (日志文件，不上传)
+logs/*
+!logs/.gitkeep
+
+# Trained Models (训练好的模型)
+*.pth
+*.pt
+*.ckpt
+
+# Temporary files
+*.log
+*.tmp
+temp/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# PyTorch
+*.pth.tar
+checkpoint/
+
+# TensorBoard
+runs/
+tb_logs/
+
+# Weights & Biases
+wandb/

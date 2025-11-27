@@ -1,0 +1,40 @@
+# Kuroneko-AutoML Dependencies
+# Python 3.9+
+
+# Core Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# LLM Interface
+transformers>=4.35.0
+accelerate>=0.24.0
+bitsandbytes>=0.41.0
+sentencepiece>=0.1.99
+protobuf>=3.20.0
+
+# Model Hub
+huggingface-hub>=0.19.0
+
+# CLI & UI
+rich>=13.7.0
+typer>=0.9.0
+
+# Data Validation
+pydantic>=2.5.0
+
+# Configuration Management
+pyyaml>=6.0.1
+
+# Utilities
+numpy>=1.24.0
+pandas>=2.0.0
+psutil>=5.9.0
+
+# Logging & Monitoring
+tensorboard>=2.15.0
+wandb>=0.16.0
+
+# Code Analysis
+ast-comments>=1.1.0
+black>=23.12.0

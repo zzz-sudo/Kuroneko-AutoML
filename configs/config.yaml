@@ -1,0 +1,58 @@
+# Kuroneko-AutoML 配置文件
+# Author: Kuroneko
+
+# 大语言模型配置
+model:
+  # 模型名称（HuggingFace 模型 ID）
+  name: "deepseek-ai/deepseek-coder-1.3b-instruct"  # 小模型，CPU可用，约6GB内存
+  # 大模型备用（需GPU支持）：
+  # name: "deepseek-ai/deepseek-coder-7b-instruct-v1.5"
+  # 本地模型存储目录
+  models_dir: "./models"
+  # 是否使用量化加载（节省显存）
+  use_quantization: false  # CPU模式不使用量化
+  # 量化位数（4 或 8）
+  quantization_bits: 4
+
+# 数据集配置
+data:
+  # 数据集名称（支持: cifar10, cifar100, mnist, fashionmnist）
+  dataset_name: "cifar10"
+  # 本地数据存储目录
+  data_dir: "./data"
+  # 批次大小
+  batch_size: 128
+  # 数据加载线程数
+  num_workers: 4
+
+# 训练配置
+training:
+  # 训练轮数
+  epochs: 10
+  # 学习率
+  learning_rate: 0.001
+
+# 反馈循环配置
+feedback:
+  # 奖励阈值（低于此值的样本不会被用于微调）
+  reward_threshold: 0.7
+  # 触发 LoRA 微调的最小样本数
+  lora_trigger_threshold: 10
+  # 样本缓冲区大小
+  buffer_size: 100
+
+# 日志目录
+logs_dir: "./logs"
+
+# LoRA 微调配置
+lora:
+  # LoRA rank
+  r: 8
+  # LoRA alpha
+  alpha: 32
+  # LoRA dropout
+  dropout: 0.1
+  # 微调轮数
+  num_epochs: 3
+  # 微调学习率
+  learning_rate: 0.0001
